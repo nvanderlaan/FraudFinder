@@ -1,23 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <!-- 
-    normalize.css removes cross-browser differences in defaults, e.g.,
-    differences in how form elements appear between Firefox and IE
-    See: http://necolas.github.com/normalize.css/
-  -->
+
   <link rel="stylesheet" href="/css/normalize.css">
-  <!--
-    application.css is where you put your styles
-  -->
+
   <link rel="stylesheet" href="/css/application.css">
+  <link href='https://fonts.googleapis.com/css?family=Carrois+Gothic+SC' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
 
   <script src="/js/jquery.js"></script>
   <script src="/js/application.js"></script>
 
   <title></title>
 </head>
+
 <body>
+
+  <nav>
+    <a class="home_button" href="/">Home</a>
+
+    <div id="button_container">
+      <% if !current_user %>
+        <a class="nav_buttons" href="/users/new">Register</a>
+        <a class="nav_buttons" href="/login">Login</a>
+      <% else %>
+        <a class="nav_buttons" href="/user/show"><%= current_user.username %></a>
+        <a class="nav_buttons" href="/logout">Logout</a>
+      <% end %>
+    </div>
+  </nav>
+
   <%= yield %>
 </body>
+
 </html>
