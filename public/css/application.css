@@ -1,0 +1,64 @@
+body {
+  background-color: #fff2ef;
+}
+
+nav {
+  background-color: #fbbc05;
+  height: 20px;
+  padding: 10px;
+}
+
+#logo_container {
+  margin: auto;
+  margin-top: 20px;
+  width: 400px;
+  height: 80px;
+  text-align: center;
+}
+
+.logo1 {
+  font-family: 'Carrois Gothic SC', sans-serif;
+  display: inline;
+  font-size: 60px;
+}
+
+.logo2 {
+  font-family: 'Francois One', sans-serif;
+  display: inline;
+  font-size: 60px;
+  color: #9c2902;
+}
+
+.home_button {
+  background-color: #fff2ef;
+  color: #fbbc05;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 5px;
+  margin-left: 60px;
+}
+
+#button_container {
+  float: right;
+  margin-right: 60px;
+}
+
+.nav_buttons {
+  border: 1px solid #fff2ef;
+  color: #fff2ef;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 5px;
+  margin-left: 20px;
+}
+
+.nav_buttons:hover {
+  background-color: #fff2ef;
+  color: #fbbc05;
+}
+
+.home_button:hover {
+  background-color: #fbbc05;
+  color: #fff2ef;
+}
