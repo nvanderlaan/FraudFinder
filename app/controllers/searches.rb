@@ -1,0 +1,3 @@
+post "/searches" do
+
+end

@@ -8,6 +8,11 @@ nav {
   padding: 10px;
 }
 
+.body_container {
+  width: 80%;
+  margin: auto;
+}
+
 #logo_container {
   margin: auto;
   margin-top: 20px;
@@ -61,4 +66,32 @@ nav {
 .home_button:hover {
   background-color: #fbbc05;
   color: #fff2ef;
+}
+
+#img_search_form {
+  margin: auto;
+  width: 550px;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+form {
+  margin-top: 200px;
+}
+
+#form_title {
+  font-weight: bold;
+}
+
+#source_img_url {
+  width: 100%;
+  height: 30px;
+}
+
+#search_button {
+  margin-top: 12px;
+  float: right;
+  background-color: #9c2902;
+  color: #fff2ef;
+  border-radius: 5px;
 }
