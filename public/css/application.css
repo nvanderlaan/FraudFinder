@@ -95,3 +95,65 @@ form {
   color: #fff2ef;
   border-radius: 5px;
 }
+
+#sherlock_logo {
+  margin: auto;
+  margin-top: 60px;
+  width: 307px;
+  height: 467px;
+}
+
+#sherlock {
+  width: 307px;
+  height: 467px;
+}
+
+.og_img {
+  width: 300px;
+}
+
+.search_container {
+  width: 800px;
+  height: 250px;
+  margin: auto;
+}
+
+#og_list {
+  list-style-type: none;
+  margin-left: 300px;
+}
+
+.original_image {
+  display: inline-block;
+  float: left;
+}
+
+/*.original_image_title {
+  border: 1px solid black;
+  display: inline-block;
+  float: left;
+}
+
+.original_image_form {
+  border: 1px solid black;
+  display: inline-block;
+  float: left;
+}*/
+
+#search_edit_form {
+  display: inline;
+}
+
+.matched_images_container {
+  width: 1100px;
+  height: 300px;
+  margin: auto;
+  border: 1px solid black;
+  display: inline-block;
+  float: left;
+}
+
+#match_results li {
+  display: inline;
+  list-style-type: none;
+}

@@ -1,0 +1,10 @@
+<form id="search_edit_form" action="/searches/<%= @search.id %>/edit" method="post">
+  <input type="hidden" name="_method" value="PUT">
+  <label for="title">Title:</label>
+  <input type="text" id="title" name="search[title]" value="<%= @search.title %>">
+  <br>
+  <label for="description">Description:</label>
+  <input type="text" id="description" name="search[description]" value="<%= @search.description %>">
+  <br>
+  <input type="submit" value="Save Search Info">
+</form>

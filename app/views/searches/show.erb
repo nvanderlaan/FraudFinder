@@ -1,0 +1,52 @@
+<div id="logo_container">
+  <h1 class="logo2">Fraud</h1><h1 class="logo1">Finder</h1>
+</div>
+
+<div class="search_container">
+  <div class="original_image_container">
+
+    <div class="original_image">
+      <img class="og_img" src="<%= @search.source_img_url %>">
+    </div>
+
+    <% if @search.title == nil && @search.description == nil %>
+      <ul id="og_list">
+        <li>
+          <h2>Original Image:</h2>
+        </li>
+        <li>
+          <%= erb :"searches/edit", locals: { search: @search } %>
+        </li>
+      </ul>
+    <% else %>
+      <ul id="og_list">
+        <li>
+          <h2>Original Image:</h2>
+        </li>
+        <li>
+          <h3>Title</h3><h4><%= @search.title %></h4>
+          <h3>Description</h3><h4><%= @search.description %></h4>
+        </li>
+        <li>
+          <a href="/searches/<%= @search.id %>/edit"><input type="button" value="Edit"/></a>
+        </li>
+      </ul>
+    <% end %>
+
+  </div>
+
+  <div class="matched_images_container">
+    <h2>Matches:</h2>
+
+    <ul id="match_results">
+      <li><a href=""><img src="http://duncanlock.net/images/posts/better-figures-images-plugin-for-pelican/dummy-200x200.png"></img></a></li>
+      <li><a href=""><img src="http://duncanlock.net/images/posts/better-figures-images-plugin-for-pelican/dummy-200x200.png"></img></a></li>
+      <li><a href=""><img src="http://duncanlock.net/images/posts/better-figures-images-plugin-for-pelican/dummy-200x200.png"></img></a></li>
+      <li><a href=""><img src="http://duncanlock.net/images/posts/better-figures-images-plugin-for-pelican/dummy-200x200.png"></img></a></li>
+      <li><a href=""><img src="http://duncanlock.net/images/posts/better-figures-images-plugin-for-pelican/dummy-200x200.png"></img></a></li>
+    </ul>
+  </div>
+
+</div>
+
+
