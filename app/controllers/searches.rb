@@ -11,8 +11,8 @@ post "/searches" do
   current_user.searches << @search
 
   if @search.save
-    result_hash = second_request_and_response(@search.source_img_url)
-    p result_hash
+    # result_hash = second_request_and_response(@search.source_img_url)
+    # p result_hash
     # final_hash = process_matches(result_hash)
     # p final_hash
     erb :"searches/show"
@@ -33,6 +33,6 @@ get "/searches/:id/edit" do
   @search.title = nil
   @search.description = nil
 
-  redirect "/searches"
-  # erb :"searches/edit", locals: { search: @search }
+  # redirect "/searches"
+  erb :"searches/edit", locals: { search: @search }
 end
