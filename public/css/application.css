@@ -173,3 +173,7 @@ form {
 #match_title {
   margin-left: 40px;
 }
+
+.match_images {
+  width: 50px;
+}

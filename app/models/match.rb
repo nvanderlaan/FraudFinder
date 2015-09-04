@@ -9,7 +9,7 @@ class Match < ActiveRecord::Base
     result_hash.each do |key, value|
         value.each do |key, value|
           value.each do |key, value|
-            if value
+            if value && key
               new_hash[value["page"]] = value["usage-image"]
             end
           end

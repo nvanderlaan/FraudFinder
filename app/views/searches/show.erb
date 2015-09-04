@@ -39,11 +39,13 @@
     <h2 id="match_title">Matches:</h2>
 
     <ul id="match_results">
-      <li><a href=""><img src="http://duncanlock.net/images/posts/better-figures-images-plugin-for-pelican/dummy-200x200.png"></img></a></li>
-      <li><a href=""><img src="http://duncanlock.net/images/posts/better-figures-images-plugin-for-pelican/dummy-200x200.png"></img></a></li>
-      <li><a href=""><img src="http://duncanlock.net/images/posts/better-figures-images-plugin-for-pelican/dummy-200x200.png"></img></a></li>
-      <li><a href=""><img src="http://duncanlock.net/images/posts/better-figures-images-plugin-for-pelican/dummy-200x200.png"></img></a></li>
-      <li><a href=""><img src="http://duncanlock.net/images/posts/better-figures-images-plugin-for-pelican/dummy-200x200.png"></img></a></li>
+      <% @search.matches.each do |match| %>
+        <% if @search.matches.count != 0 %>
+          <li><a class="match_images" href="<%= match.img_host_url %>"><img src="<%= match.img_direct_url %>"></img></a></li>
+        <% else %>
+          <li>FraudFinder found nothing that looked suspicious!</li>
+        <% end> %>
+      <% end %>
     </ul>
   </div>
 
