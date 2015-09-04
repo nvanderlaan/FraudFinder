@@ -114,8 +114,14 @@ form {
 
 .search_container {
   width: 800px;
-  height: 250px;
+  height: 600px;
   margin: auto;
+  margin-top: 60px;
+}
+
+.original_image_container {
+  display: inline-block;
+  margin-left: 80px;
 }
 
 #og_list {
@@ -128,18 +134,6 @@ form {
   float: left;
 }
 
-/*.original_image_title {
-  border: 1px solid black;
-  display: inline-block;
-  float: left;
-}
-
-.original_image_form {
-  border: 1px solid black;
-  display: inline-block;
-  float: left;
-}*/
-
 #search_edit_form {
   display: inline;
 }
@@ -147,13 +141,35 @@ form {
 .matched_images_container {
   width: 1100px;
   height: 300px;
-  margin: auto;
-  border: 1px solid black;
+  margin-left: -120px;
+  margin-top: 30px;
   display: inline-block;
-  float: left;
 }
 
 #match_results li {
   display: inline;
   list-style-type: none;
+}
+
+#title {
+  width: 200px;
+}
+
+#description {
+  margin-top: 15px;
+  width: 200px;
+}
+
+#submit_button {
+  margin-top: 15px;
+  background-color: #fbbc05;
+  color: black;
+  border-style: none;
+  border-radius: 5px;
+  padding: 20px;
+  width: 205px;
+}
+
+#match_title {
+  margin-left: 40px;
 }

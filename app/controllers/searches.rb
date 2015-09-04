@@ -36,6 +36,6 @@ get "/searches/:id/edit" do
   @search.title = nil
   @search.description = nil
 
-  redirect "/searches"
-  # erb :"searches/edit", locals: { search: @search }
+  # redirect "/searches"
+  erb :"searches/edit", locals: { search: @search }
 end
