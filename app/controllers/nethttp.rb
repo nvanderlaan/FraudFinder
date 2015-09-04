@@ -11,12 +11,11 @@ UID = "6609"
 APIKEY = "030a0348079fdd2aa3309e6cc79a8bcd"
 
 # UNIX Timestamp set for some time in future-they recommend 20 min
-expires = (Time.now + 20*60).to_i
+$expires = (Time.now + 20*60).to_i
 
 # Method for generating signature
 def gen_signature
-  expires = (Time.now + 20*60).to_i
-  string_to_sign = "#{UID}\n#{expires}"
+  string_to_sign = "#{UID}\n#{$expires}"
   hmac = OpenSSL::HMAC.digest('sha1', APIKEY, string_to_sign)
   encoded = Base64.strict_encode64(hmac)
   signature = CGI.escape(encoded)
@@ -64,7 +63,6 @@ second_request.body = second_data
 second_uri = URI.parse("https://incandescent.xyz/api/get/")
 
 sleep(75)
-
 
 second_http = Net::HTTP.new(second_uri.host, second_uri.port)
 second_http.use_ssl = true
