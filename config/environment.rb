@@ -20,6 +20,14 @@ require "sinatra/reloader" if development?
 
 require 'erb'
 
+require "net/http"
+require "openssl"
+require "base64"
+require "uri"
+require "json"
+require "cgi"
+
+
 # Some helper constants for path-centric logic
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
 
