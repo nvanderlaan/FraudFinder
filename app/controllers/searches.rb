@@ -1,3 +1,6 @@
+require_relative "../models/nethttp"
+require_relative "../models/match"
+
 get "/searches" do
   @search = Search.find(current_user.searches.last.id)
   erb :"searches/show"
@@ -8,6 +11,10 @@ post "/searches" do
   current_user.searches << @search
 
   if @search.save
+    result_hash = second_request_and_response(@search.source_img_url)
+    p result_hash
+    # final_hash = process_matches(result_hash)
+    # p final_hash
     erb :"searches/show"
   else
     redirect "/"
@@ -25,5 +32,7 @@ get "/searches/:id/edit" do
   @search = Search.find(params[:id])
   @search.title = nil
   @search.description = nil
-  erb :"searches/edit", locals: { search: @search }
+
+  redirect "/searches"
+  # erb :"searches/edit", locals: { search: @search }
 end
