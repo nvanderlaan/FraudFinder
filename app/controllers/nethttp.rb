@@ -28,7 +28,7 @@ current_signature = gen_signature
 url = "http://imgsv.imaging.nikon.com/lineup/lens/singlefocal/normal/af-s_50mmf_18g/img/sample/sample1_l.jpg"
 
 # data to convey to json--images in array
-data = { uid: UID, expires: expires, signature: current_signature, images: [url] }
+data = { uid: UID, expires: $expires, signature: current_signature, images: [url] }
 # data must be in JSON format
 data = data.to_json
 
@@ -53,7 +53,7 @@ parsed_project_id = JSON.parse(response.body)["project_id"]
 
 # second post request with project_id
 
-second_data = { uid: UID, expires: expires, signature: current_signature, project_id: parsed_project_id }.to_json
+second_data = { uid: UID, expires: $expires, signature: current_signature, project_id: parsed_project_id }.to_json
 
 # Notice POST url is now "api/get" rather than "api/add"
 
