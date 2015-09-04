@@ -20,3 +20,8 @@ put "/searches/:id/edit" do
 
   redirect "/searches"
 end
+
+get "/searches/:id/edit" do
+  @search = Search.find(params[:id])
+  erb :"searches/edit", locals: { search: @search }
+end
