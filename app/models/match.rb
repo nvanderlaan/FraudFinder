@@ -4,16 +4,18 @@ class Match < ActiveRecord::Base
   validates :img_direct_url, presence: true
   validates :img_host_url, presence: true
 
-  def process_matches(result_hash)
-    @new_hash = {}
+  def self.process_matches(result_hash)
+    new_hash = {}
     result_hash.each do |key, value|
-      value.each do |key, value|
-        value.each do|key, value|
-          new_hash[value["page"]] = value["usage-image"]
-        end
+        value.each do |key, value|
+          value.each do |key, value|
+            if value
+              new_hash[value["page"]] = value["usage-image"]
+            end
+          end
       end
     end
-    @new_hash
+    new_hash
   end
 
   # match1 = @search.matches.create!(link_to_site: @new_hash.keys[0], img_url: @new_hash.values[0])
