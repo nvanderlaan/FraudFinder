@@ -23,5 +23,7 @@ end
 
 get "/searches/:id/edit" do
   @search = Search.find(params[:id])
+  @search.title = nil
+  @search.description = nil
   erb :"searches/edit", locals: { search: @search }
 end
